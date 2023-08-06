@@ -21,12 +21,12 @@ function RootLayout({
 
   
   return (
-      <html lang="en">
-        <body className={inter.className}>{ children }</body>
-      </html>
+      <AuthContextProvider>
+        <html lang="en">
+          <body className={inter.className}>{ children }</body>
+        </html>
+      </AuthContextProvider>
   )
 }
 
-export default ({children}:{children:React.ReactNode})=> {
-  return <AuthContextProvider><RootLayout>{children}</RootLayout></AuthContextProvider>
-}
+export default RootLayout

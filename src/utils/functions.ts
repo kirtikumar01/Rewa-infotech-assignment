@@ -2,8 +2,9 @@ import { UserType } from "./types";
 import fs from "fs";
 import AES from 'crypto-js/aes'
 import CryptoJS from "crypto-js";
+import {tmpdir} from 'os'
+tmpdir()
 const filePath = process.cwd() + "/src/utils/userData.json"
-
 
 
 export function getUserData(){

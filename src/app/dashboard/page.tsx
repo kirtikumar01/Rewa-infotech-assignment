@@ -6,7 +6,7 @@ import News from "@/app/dashboard/components/News"
 import Offers from "@/app/dashboard/components/Offers"
 import Purchase from "@/app/dashboard/components/Purchase"
 import Reviews from "@/app/dashboard/components/Reviews"
-import AuthWrapper from "@/utils/AuthWrapper"
+import authWrapper from "@/utils/AuthWrapper"
 import { useAuthContext } from "@/utils/context/AuthContext"
 import { useEffect } from "react"
 
@@ -29,4 +29,4 @@ const Dashboard = () => {
   )
 }
 
-export default AuthWrapper(Dashboard)
+export default authWrapper(Dashboard)

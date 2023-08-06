@@ -2,9 +2,9 @@ import React, { useEffect } from 'react'
 import { useAuthContext } from './context/AuthContext'
 import { useRouter } from 'next/navigation'
 
-const NonAuthWrapper = (Component:React.ComponentType) => {
+const nonAuthWrapper = (Component:React.ComponentType) => {
 
-    const wrapper = (props:any) => {
+    const Wrapper = (props:any) => {
         const{loading, hasToken} = useAuthContext()
         const router = useRouter()
         useEffect(()=>{
@@ -19,8 +19,8 @@ const NonAuthWrapper = (Component:React.ComponentType) => {
     }
 
   return (
-    wrapper
+    Wrapper
   )
 }
 
-export default NonAuthWrapper
+export default nonAuthWrapper

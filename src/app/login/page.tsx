@@ -1,5 +1,5 @@
 "use client"
-import NonAuthWrapper from "@/utils/NonAuthWrapper"
+import nonAuthWrapper from "@/utils/NonAuthWrapper"
 import { useAuthContext } from "@/utils/context/AuthContext"
 import Link from "next/link"
 import { FormEventHandler, useContext, useEffect } from "react"
@@ -59,4 +59,4 @@ const Login = () => {
   )
 }
 
-export default NonAuthWrapper(Login)
+export default nonAuthWrapper(Login)

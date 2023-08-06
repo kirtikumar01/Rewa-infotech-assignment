@@ -1,5 +1,5 @@
 "use client"
-import NonAuthWrapper from "@/utils/NonAuthWrapper"
+import nonAuthWrapper from "@/utils/NonAuthWrapper"
 import Link from "next/link"
 import { useRouter } from "next/navigation"
 import { FormEventHandler, useEffect } from "react"
@@ -69,4 +69,4 @@ const Register = () => {
   )
 }
 
-export default NonAuthWrapper(Register)
+export default nonAuthWrapper(Register)

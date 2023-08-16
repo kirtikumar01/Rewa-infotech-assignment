@@ -9,6 +9,7 @@ export async function POST(req:NextRequest){
             return NextResponse.json({success:false, message:"both email and password are required"})
         }
         const fileData = getUserData()
+        // console.log("filedata - ", fileData)
         const user = fileData.find((obj)=>{
             return obj.email===email && obj.password===password
         })
@@ -16,7 +17,7 @@ export async function POST(req:NextRequest){
             return NextResponse.json({success:false, message:"email or password is incorrect"})
         }
         const token = getJwtToken(user)
-        return NextResponse.json({success:true, message:"logged in successflly!", token})
+        return NextResponse.json({success:true, message:"logged in successflly!", token, fileData})
     }catch(err){
         console.log(err)
         NextResponse.json({success:false, message:"Something went wrong!"})

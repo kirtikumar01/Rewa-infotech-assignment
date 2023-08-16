@@ -2,7 +2,7 @@
 import nonAuthWrapper from "@/utils/NonAuthWrapper"
 import { useAuthContext } from "@/utils/context/AuthContext"
 import Link from "next/link"
-import { FormEventHandler, useContext, useEffect } from "react"
+import { FormEventHandler, useContext, useEffect, useState } from "react"
 
 const Login = () => {
     const {setToken} = useAuthContext()

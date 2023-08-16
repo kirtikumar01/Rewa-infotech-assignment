@@ -16,7 +16,7 @@ export function getUserData(){
 }
 
 export function setUserData(data:UserType[]){
-    fs.writeFileSync(filePath, JSON.stringify(data))
+    fs.writeFileSync(filePath, JSON.stringify(data.map((e)=> encryption(e))))
 }
 
 export function encryption(data:{[key:string]:string}){
@@ -26,6 +26,10 @@ export function encryption(data:{[key:string]:string}){
     })
     return result
 }
+
+// export function encryption(data:any){
+//     return AES.encrypt( data, process.env.SECRET_KEY as string).toString()
+// }
 
 export function decryption(data:{[key:string]:string}){
     let result:any = {}
